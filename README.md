@@ -4,7 +4,7 @@ Code from my NSF REU at Emory University (Computational Mathematics for Data Sci
 
 A residual network learns a system's motion directly. A Hamiltonian-inspired neural network (HINN) learns the system's Hamiltonian, its energy function, and the motion follows from it. These notebooks build both kinds of network in PyTorch and test them on a spring-mass system and on the two-body problem.
 
-**Main result.** Stepping the learned system with symplectic Verlet integration matched the accuracy of fourth-order Runge-Kutta (RK4) at about 4.5 times lower compute cost.
+**Main result.** With symplectic Verlet steps the network reached accuracy comparable to fourth-order Runge-Kutta (RK4) in about a quarter of the training time. In `combined_rk4_and_verlet.ipynb`, 500 epochs on the two-body problem took 41.6 s with Verlet steps and 156.8 s with RK4, with test losses of 7.6e-10 and 3.8e-10.
 
 Presented as *Predicting Dynamics of ODEs using Residual and Hamiltonian-Inspired Neural Networks* at the Joint Mathematics Meetings, 2023.
 
